@@ -1,5 +1,5 @@
 %
-N20; IESI Project 1: Basic Drilling
+N20; IESI Project 2: Basic Drilling
 N30; O0100 : Drill five holes : Rev. 5
 N40; Material : wax.
 N50; 7/28/23 VS
