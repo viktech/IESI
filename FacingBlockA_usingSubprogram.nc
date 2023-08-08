@@ -13,5 +13,5 @@ G17 (XY plane select)
 G20 (Set Units to Inches)
 G40 (Cutter radius comp cancel)
 G49 (Tool length comp cancel)
-G80 (Cancel Canned Cycles)
+G80 (Canned Cycles Cancel)
 M99
