@@ -23,7 +23,7 @@ N420; M9 (Coolant Off; No coolant needed for wax)
 N430 M5 (Stop Spindle)
 N440 G0 Z3.000 (Move spindle above stock 3")
 N450 G0 X0 Y0 (Move spindle home 0,0)
-N500 M22 (Drill5Holes.txt,A) On @D at @TD for @FN runtime was @TT;
+N500 M22 (drill5holes_usingSubprogram.log,A) On @D at @TD for @FN runtime was @TT;
 N550 M30 (End of Program)
 
 O2000 (Subprogram for peck drilling routine, .250 depth 2 pecks; .125 per peck)
