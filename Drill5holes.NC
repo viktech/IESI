@@ -39,17 +39,9 @@ N380 G0 Z0.000 (Retract to clean)
 N390 G1 Z-0.250 (plunge: 2)
 N400 G0 Z0.000 (Retract to clean)
 N410 G0 Z0.100 (Clearance Plane)
-N420 M9 (Coolant Off)
+N420 ;M9 (Coolant Off)
 N430 M5 (Stop Spindle)
 N440 G0 Z3.000 (Move spindle above stock 3")
 N450 G0 X0 Y0 (Move spindle home 0,0)
 N460 M30 (End of Program)
-N470;
-N480 O1000
-N490 G1 Z-0.125 (plunge: 1)
-N500 G0 Z0.000 (Retract to clean)
-N510 G1 Z-0.250 (plunge: 2)
-N520 G0 Z0.000 (Retract to clean)
-N530 G0 Z0.100 (Clearance Plane)
-N540 M99
 %
