@@ -26,7 +26,7 @@ N450 G0 X0 Y0 (Move spindle home 0,0)
 N500 M22 (Drill5Holes.txt,A) On @D at @TD for @FN runtime was @TT;
 N550 M30 (End of Program)
 
-O2000 (Subprogram for peck drilling routine, .250 depth 2 pecks)
+O2000 (Subprogram for peck drilling routine, .250 depth 2 pecks; .125 per peck)
 N560 G1 Z-0.125 (Peck plunge: 1)
 N570 G0 Z0.000 (Retract to clean)
 N580 G1 Z-0.250 (Peck plunge: 2)
