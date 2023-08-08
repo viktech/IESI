@@ -4,10 +4,10 @@ N30; O0100 : Drill five holes : Rev. 5
 N40; Material : wax.
 N50; 7/28/23 VS
 N60;
-N70 G90 G17 G20 G40 G49 G80; (Absolute positioning, XY plane select, inches, Cutter radius comp cancel, Tool length comp cancel)
-N80 T1 M6; (Change Tool1)
-N90 S917 M3 F4; (Speed 917, Start Spindle, Feed Rate 4 inch per min)
-N100 G0 G54 X0.000 Y0.000;
+N70 G90 G17 G20 G40 G49 G80 (Absolute positioning, XY plane select, inches, Cutter radius comp cancel, Tool length comp cancel)
+N80 T1 M6 (Change Tool1)
+N90 S917 M3 F4 (Speed 917, Start Spindle, Feed Rate 4 inch per min)
+N100 G0 G54 X0.000 Y0.000 Z0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
 N110 G0 X0.000 Y0.000 Z0.100 (Datum + Clearance Plane)
 N120 G0 X0.8125 Y0.500 (Hole1)
 N130 G1 Z-0.125 (plunge: 1)
