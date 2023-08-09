@@ -5,7 +5,8 @@ N40; Material : 1050 (wax)
 N50; 7/28/23 VS
 N60;
 N70 G90 G17 G20 G40 G49 G80 (Absolute positioning, XY plane select, inches, Cutter radius comp cancel, Tool length comp cancel, Canned cycle cancel)
-N80 T1 M6 ;T4 M6 (Change Tool1)
+N80 T1 M6 (Change Tool1)
+N81; T4 M6 (Change Tool4)
 N90 S917 M3 F4 (Speed 917, Start Spindle, Feed Rate 4 inch per min (feeds and speeds for wax))
 N100 G0 G54 X0.000 Y0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
 N110 G0 X0.000 Y0.000 Z0.100 (Datum + Clearance Plane)
