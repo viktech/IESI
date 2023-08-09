@@ -14,8 +14,8 @@ N70 M98 P0001 (Call Subprogram 0001 to initialize machine)
 ; set variables for feeds and speeds changes, da db dc corresponding with rough, finish, final pass, showing calcs in comments 
 ; set run increment variable to '0'
 ; While y pos < `terminal y edge var ya`
-;;run O0100 to face along x axis 
-;;z lift, return home,
+;; run O0100 to face along x axis 
+;; z lift, return home,
 ;; increment run counter 
 
 M30 (End of Program)
