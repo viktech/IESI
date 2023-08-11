@@ -27,7 +27,6 @@ G20 (Set Units to Inches)
 G40 (Cutter radius comp cancel)
 G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
-; x,y,z zero set
 M99
 ;
 O0100
