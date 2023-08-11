@@ -10,7 +10,8 @@ N54 #3=.(Cutter Dia. (Inch))
 N55 #4=.(Number of Flutes)
 N56 #101=ROUND[[#1*12]/[[#3/25.4]*3.14159]] (Calculated Speed in RPM)
 N57 #102=[#4*#2*#101*25.4] (Calculated Feed in IPM)
-N70 G90 G17 G20 G40 G49 G80 (Absolute positioning, XY plane select, inches, Cutter radius comp cancel, Tool length comp cancel, Canned cycle cancel)
+N60;
+N70 P0001 (Call Subprogram 0001 to initialize machine)
 N80 T1 M6 (Change Tool1)
 N81; T4 M6 (Change Tool4)
 N90 S917 M3 F4 (Speed 917, Start Spindle, Feed Rate 4 inch per min (feeds and speeds for wax))
@@ -32,6 +33,16 @@ N450 G00 X0.000 Y0.000
 N500 M22 (E:\cnc projects\dev\IESI\drill5holes_usingSubprogram.log,A) On @D at @TD for @FN runtime was @TT
 N501; (Log date, time, filename, runtime to ./..log)
 N550 M30 (End of Program)
+;
+O0001 (Machine initialization Subprogram)
+G90 (Absolute positioning)
+G17 (XY plane select)
+G20 (Set Units to Inches)
+G40 (Cutter radius comp cancel)
+G49 (Tool length comp cancel)
+G80 (Canned Cycles Cancel)
+; x,y,z zero set
+M99
 ;
 O2000 (Subprogram for peck drilling routine, .250 depth 2 pecks; .125 per peck)
 N1000 G1 Z-0.125 (Peck plunge: 1)
