@@ -30,8 +30,8 @@ N400 M98 P2000 (Call Subprogram for peck drilling routine)
 N430 G00 Z1.000 (Move up Z 1.0 above the Z datum)
 N440 M5 (Stop Spindle)
 N450 G00 X0.000 Y0.000
-N500 M22 (E:\cnc projects\dev\IESI\drill5holes_usingSubprogramAndMacros.log,A) On @D at @TD for @FN runtime was @TT
-N501; (Log date, time, filename, runtime to ./..log)
+N500 M22 (E:\cnc projects\dev\IESI\drill5holes_usingSubprogramAndMacros.log,A) On @D at @TD for @FN runtime was @TT, running at #101 RPM and #102 IPM.
+N501; (Log date, time, filename, runtime, var RPM, var IPM to ./..log)
 N550 M30 (End of Program)
 N560;
 N570;
