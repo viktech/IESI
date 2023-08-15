@@ -5,9 +5,9 @@ N40; Material : wax.
 N50; 8/8/23 VS
 N60;
 N70 M98 P0001 (Call Subprogram 0001 to initialize machine)
-; tool change operation with comment of expected tool characteristics 
-; spindle startup initializing feeds and speeds, include calcs in comment 
-; 
+N80 T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
+N90 (Wax Surface Feet Per Minute: 20; Revolutions Per Minute: 204)
+N100; 
 ; set variables for z pass height, za zb zc zd ze corresponding with pass z depth 
 ; set variables for terminal edge dimensions, xa ya corresponding with edges of face 
 ; ?set variables for absolute position reading px py? to calculate tool position 
