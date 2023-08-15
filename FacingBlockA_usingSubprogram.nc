@@ -7,12 +7,24 @@ N60;
 N70 M98 P0001 (Call Subprogram 0001 to initialize machine)
 N80 T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
 N90; (Wax Surface Feet Per Minute: 20; Revolutions Per Minute: 204)
-N100; 
-N110 #1=20.(Cutting Speed (Ft/Min))
-N120 #2=.(IPM (Feed/Tooth x Tooth count x Rev/Min))
-N130 #3=.(Cutter Dia. (Inch))
-N140 #4=.(Number of Flutes)
-N150 #101=ROUND[[#1*12]/[[#3/25.4]*3.14159]] (Calculated Speed in RPM)
+N100;
+N110 #1=.3750 (Tool Diameter)
+N120 #2=20 (Surface Feet Per Minute (Speed))
+N130 #3=2 (Number of Flutes)
+N140 #4=[#2*12] (Surface Inches per Minute)
+#101=ROUND[[#2*3.82]/#1] (Revolutions Per Minute)
+#102=[[[#4]/#101]/#3] (Inches Per Tooth)
+#103=ROUND[#101*#3*#102] (Inches Per Minute (Feed))
+#104=[#4/#101] (Inches Per Revolution)
+
+
+
+
+N110 #1=20.(Cutting Speed (SFM/Surface Feet per Minute),(IPM/Inches per Minute = #1*12)
+N120 #2=.(IPM (Feed per Tooth x Num. of Flutes x Revs per Min)(240*2*(20*3.82)))
+N130 #3=.3750.(Cutter Dia. (Inch))
+N140 #4=2.(Number of Flutes)
+N150 #101=ROUND[[#1*12]/[[#3/25.4]*3.14159]] (Calculated Speed in RPM)(IPM/
 N160 #102=[#4*#2*#101*25.4] (Calculated Feed in IPM)
 N170;
 ; set variables for z pass height, za zb zc zd ze corresponding with pass z depth 
