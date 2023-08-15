@@ -22,3 +22,5 @@ L: Number of repeats
 
 
 Heat is the primary driver of tool wear
+
+Stainless Steel will work harden if feed rate is too slow or spindle speed is wrong
