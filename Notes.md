@@ -4,7 +4,7 @@ G01 moves at feedrate
 
 G01 is safer than G00, which moves at rapid.  Easier to stop crashes
 
-G83 XYZ R P Q F L
+Peck Drilling using Canned Cycle G83 XYZ R P Q F L
 
 XY: Coordinates of the hole
 
