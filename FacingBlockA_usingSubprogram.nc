@@ -27,7 +27,7 @@ N170;
 
 M30 (End of Program)
 ;
-O0001
+O0001 (Machine Initialization Subprogram)
 G90 (Absolute positioning)
 G17 (XY plane select)
 G20 (Set Units to Inches)
@@ -36,7 +36,7 @@ G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
 M99
 ;
-O0100
+O0100 (Facing Pass Subprogram)
 ; ?turn off absolute positioning? (does it clear the config?)
 ; turn on relative position
 ; position tool at 35% of tool diameter
