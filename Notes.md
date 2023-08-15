@@ -19,3 +19,6 @@ Q: Depth to increase on each peck.
 F: Cutting feedrate
 
 L: Number of repeats
+
+
+Heat is the primary driver of tool wear
