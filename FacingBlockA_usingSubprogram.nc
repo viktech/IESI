@@ -1,8 +1,14 @@
 %
-N20; IESI Project 1.5: Facing the Block Implementing Subprograms
-N30; O<xxxx) : Facing the Block  Blueprint Rev. <x>
-N40; Material : 1060(?). Simulated using wax 
-N50; 8/8/23 VS
+Organization: IESI
+Title: Facing the Block
+Project: 1 
+Code Revision: 5 - Implementing Subprograms
+Blueprint: "Facing the Block"
+Blueprint Rev.: <x>
+Material: 1060(?) (Simulated using wax)
+Machine: Intellitek (6000?)
+Creation Date 8/8/23
+Author VS
 N60;
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
