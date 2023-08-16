@@ -86,4 +86,10 @@ G90
 ; increment y by 50% tool diameter
 M99
 ;
+O999
+; z lift
+; spindle off 
+; xy home
+; log to file
+M99
 %
