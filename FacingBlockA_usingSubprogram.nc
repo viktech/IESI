@@ -47,6 +47,7 @@ G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 ; add 
 
 M30 (End of Program)
+; ____________________________________________
 ;
 O0001 (Machine Initialization Subprogram)
 G90 (Absolute positioning)
