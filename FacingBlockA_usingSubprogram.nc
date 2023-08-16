@@ -9,7 +9,9 @@ Material: 1060(?) (Simulated using wax)
 Machine: Intellitek (6000?)
 Creation Date: 8/8/23
 Author: VS
-N60;
+N60;____________________________________________
+N70;
+; Variable Block
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
 N130 #3=2 (Number of Flutes)
@@ -21,26 +23,16 @@ N131 #4= (Revolutions Per Minute (Speed))
 #14= (Observed Y)
 #15= (Observed Z)
 ;
+;
+; Execution Block 
 M98 P0001 (Call Subprogram 0001 to initialize machine)
 T4 M6 (Change to Tool4 - 3/8 in Endmill, 2 Flutes, HSS)
 M98 P0010 (Call Subprogram to set Feed and Speed Variables)
 N90 S#4 M3 F#2 (Start Spindle, Speed, Feed)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 
-N100;
 
 
-
-
-
-
-N110 #1=20.(Cutting Speed (SFM/Surface Feet per Minute),(IPM/Inches per Minute = #1*12)
-N120 #2=.(IPM (Feed per Tooth x Num. of Flutes x Revs per Min)(240*2*(20*3.82)))
-N130 #3=.3750.(Cutter Dia. (Inch))
-N140 #4=2.(Number of Flutes)
-N150 #101=ROUND[[#1*12]/[[#3/25.4]*3.14159]] (Calculated Speed in RPM)(IPM/
-N160 #102=[#4*#2*#101*25.4] (Calculated Feed in IPM)
-N170;
 ;
 ; 
 ; ?set variables for absolute position reading px py? to calculate tool position 
