@@ -42,8 +42,7 @@ END1
 M30 (End of Program)
 ;
 ;  
-;  do math for rough, finish, final pass
-; While y pos < `terminal y edge var ya`
+
 ;; run O0100 to face along x axis 
 ;; z lift, return home,
 ;; increment run counter by 1. Increment position by half tool diameter
