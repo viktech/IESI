@@ -39,6 +39,7 @@ M98 P0100 (Facing Pass)
 #1000=[#1000+[#1/2]] (Increment Y-Pos by Tool Radius)
 END1
 ;
+M98 P0999
 M30 (End of Program)
 ;
 ;  
@@ -86,7 +87,7 @@ G90
 ; increment y by 50% tool diameter
 M99
 ;
-O999
+O0999
 ; z lift
 ; spindle off 
 ; xy home
