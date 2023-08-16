@@ -6,7 +6,7 @@ Code Revision: 5 - Implementing Variables, Subprograms, and Loops
 Blueprint: "Facing the Block"
 Blueprint Rev.: <x>
 Material: 1060(?) (Simulated using wax)
-Machine: Intellitek (6000?)
+Machine: Intellitek (6000?) CNC
 Tool: 3/8 in Endmill, 2 Flutes, HSS
 Creation Date: 8/8/23
 Author: VS
@@ -33,7 +33,10 @@ M98 P0001 (Initialize machine)
 M98 P0010 (Feed and Speed Variables)
 S#4 M3 F#2 (Start Spindle)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
+WHILE [#1000 LE #14] DO1 (Y-Pos Counter <= Observed Y)
 
+#1000=[#1000+[#1/2]] (Increment Y Tool Pos by Tool Radius)
+END1
 
 M30 (End of Program)
 ;
