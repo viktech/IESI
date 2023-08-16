@@ -7,11 +7,13 @@ Blueprint: "Facing the Block"
 Blueprint Rev.: <x>
 Material: 1060(?) (Simulated using wax)
 Machine: Intellitek (6000?)
+Tool: 3/8 in Endmill, 2 Flutes, HSS
 Creation Date: 8/8/23
 Author: VS
 N60; ____________________________________________
 N70;
 ; Variable Block
+N100 #0=4 (Tool Slot)
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
 N130 #3=2 (Number of Flutes)
@@ -22,13 +24,12 @@ N131 #4= (Revolutions Per Minute (Speed))
 #13= (Observed X)
 #14= (Observed Y)
 #15= (Observed Z)
-;
+; ____________________________________________
 ;
 ; Execution Block 
-M98 P0001 (Call Subprogram 0001 to initialize machine)
-T4 M6 (Change to Tool4 - 3/8 in Endmill, 2 Flutes, HSS)
-M98 P0010 (Call Subprogram to set Feed and Speed Variables)
-N90 S#4 M3 F#2 (Start Spindle, Speed, Feed)
+M98 P0001 (Initialize machine)
+M98 P0010 (Feed and Speed Variables)
+N90 S#4 M3 F#2 (Start Spindle)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 
 
