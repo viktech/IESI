@@ -18,6 +18,7 @@ N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
 N130 #3=2 (Number of Flutes)
 N131 #4= (Revolutions Per Minute (Speed))
+#5=4 (Number of Passes)
 #10= (Nominal X)
 #11= (Nominal Y)
 #12= (Nominal Z)
@@ -32,9 +33,10 @@ N131 #4= (Revolutions Per Minute (Speed))
 M98 P0001 (Initialize machine)
 M98 P0010 (Feed and Speed Variables)
 S#4 M3 F#2 (Start Spindle)
-WHILE [#1000 LE #14] DO1 (Y-Pos Counter <= Observed Y)
+;
+WHILE [#1000 LE #14] DO1 (Y-Pos <= Max Y)
 M98 P0100 (Facing Pass)
-#1000=[#1000+[#1/2]] (Increment Y Tool Pos by Tool Radius)
+#1000=[#1000+[#1/2]] (Increment Y-Pos by Tool Radius)
 END1
 
 M30 (End of Program)
@@ -71,11 +73,13 @@ O0010 (Feed and Speed Calculation Subprogram)
 M99
 ;
 O0100 (Facing Pass Subprogram)
-G91 (Relative positioning)
-
-G90
-G
+G01 Z.1000
 G01 X0.000 Y#1000
+G91 (Relative positioning)
+G01 
+G90
+
+
 ; position tool at 50% of tool diameter
 ; forward tool across the x axis off the block 
 ; z-lift, 
