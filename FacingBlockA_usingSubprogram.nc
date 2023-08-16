@@ -18,8 +18,7 @@ N131 #4= (Revolutions Per Minute (Speed))
 M98 P0001 (Call Subprogram 0001 to initialize machine)
 T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
 M98 P0010 (Call Subprogram to set Feed and Speed Variables)
-N90 S#4 M3 F#2 (Speed, Start Spindle, Feed)
-G00 G54 X0.000 Y0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
+N90 S#4 M3 F#2 (Start Spindle, Speed, Feed)
 G01 X0.000 Y0.000 Z.100
 N100;
 
@@ -56,6 +55,7 @@ G20 (Set Units to Inches)
 G40 (Cutter radius comp cancel)
 G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
+G00 G54 X0.000 Y0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
 M99
 ;
 O0010 (Feed and Speed Calculation Subprogram)
