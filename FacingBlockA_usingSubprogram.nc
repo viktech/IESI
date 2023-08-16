@@ -31,7 +31,7 @@ N131 #4= (Revolutions Per Minute (Speed))
 ; Execution Block 
 M98 P0001 (Initialize machine)
 M98 P0010 (Feed and Speed Variables)
-N90 S#4 M3 F#2 (Start Spindle)
+S#4 M3 F#2 (Start Spindle)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 
 
