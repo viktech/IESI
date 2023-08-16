@@ -42,13 +42,6 @@ END1
 M30 (End of Program)
 ;
 ;  
-
-;; run O0100 to face along x axis 
-;; z lift, return home,
-;; increment run counter by 1. Increment position by half tool diameter
-; add 
-
-
 ; ____________________________________________
 ;
 O0001 (Machine Initialization Subprogram)
