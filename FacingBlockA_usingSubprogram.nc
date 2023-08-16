@@ -12,7 +12,7 @@ Creation Date: 8/8/23
 Author: VS
 N60; ____________________________________________
 N70;
-; Variable Block
+; Variables Block
 N100 #0=4 (Tool Slot)
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
