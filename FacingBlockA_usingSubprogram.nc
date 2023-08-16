@@ -9,7 +9,7 @@ Material: 1060(?) (Simulated using wax)
 Machine: Intellitek (6000?)
 Creation Date: 8/8/23
 Author: VS
-N60;____________________________________________
+N60; ____________________________________________
 N70;
 ; Variable Block
 N110 #1=.3750 (Tool Diameter)
