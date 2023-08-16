@@ -5,9 +5,9 @@ N40; Material : 1060(?). Simulated using wax
 N50; 8/8/23 VS
 N60;
 N110 #1=.3750 (Tool Diameter)
-N120 #2=20 (Surface Feet Per Minute (Speed))
+N120 #2=20 (Surface Feet Per Minute (Feed))
 N130 #3=2 (Number of Flutes)
-N131 #4= (Feed)
+N131 #4= (Revolutions Per Minute (Speed))
 #10= (Nominal X)
 #11= (Nominal Y)
 #12= (Nominal Z)
@@ -18,8 +18,9 @@ N131 #4= (Feed)
 M98 P0001 (Call Subprogram 0001 to initialize machine)
 T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
 M98 P0010 (Call Subprogram to set Feed and Speed Variables)
-
-
+N90 S#4 M3 F#2 (Speed, Start Spindle, Feed)
+G00 G54 X0.000 Y0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
+G01 X0.000 Y0.000 Z.100
 N100;
 
 
