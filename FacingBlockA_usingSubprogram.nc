@@ -71,7 +71,7 @@ O0010 (Feed and Speed Calculation Subprogram)
 M99
 ;
 O0011 (Material Removal Calculation Subprogram)
-#9000=[#15-#12]
+#9000=[[#15-#12]/2]
 #9001=[#9000*.7]
 #9002=[#9000*.2]
 #9003=[#9000*.07]
