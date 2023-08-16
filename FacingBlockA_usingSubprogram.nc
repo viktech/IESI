@@ -67,12 +67,16 @@ O0010 (Feed and Speed Calculation Subprogram)
 #100=[#2*12] (Surface Inches per Minute)
 #101=ROUND[[#2*3.82]/#1] (Revolutions Per Minute)
 #102=[[[#100]/#101]/#3] (Inches Per Tooth)
-#103=ROUND[#101*#3*#102] (Inches Per Minute (Feed))
+#103=[#101*#3*#102] (Inches Per Minute (Feed))
 #104=[#100/#101] (Inches Per Revolution)
 M99
 ;
 O0011 (Material Removal Calculation Subprogram)
 #9000=[#15-#12]
+#9001=[#9000*.7]
+#9002=[#9000*.2]
+#9003=[#9000*.07]
+#9004=[#9000*.03]
 M99
 ;
 O0100 (Facing Pass Subprogram)
