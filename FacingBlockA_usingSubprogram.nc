@@ -24,7 +24,7 @@ N131 #4= (Revolutions Per Minute (Speed))
 #13= (Observed X)
 #14= (Observed Y)
 #15= (Observed Z)
-#1000=0 (Position (Do not change))
+#1000=0 (Y Tool Position (Do not change))
 #1001=0 (Run Counter (Do not change))
 ; ____________________________________________
 ;
@@ -72,11 +72,11 @@ M99
 O0100 (Facing Pass Subprogram)
 ; ?turn off absolute positioning? (does it clear the config?)
 ; turn on relative position
-; position tool at 35% of tool diameter
+; position tool at 50% of tool diameter
 ; forward tool across the x axis off the block 
 ; z-lift, 
 ; return to x0
-; increment y by 35% tool diameter
+; increment y by 50% tool diameter
 M99
 ;
 %
