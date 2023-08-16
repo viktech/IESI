@@ -1,21 +1,28 @@
 %
 N20; IESI Project 1.5: Facing the Block Implementing Subprograms
 N30; O<xxxx) : Facing the Block : Rev. <x>
-N40; Material : wax.
+N40; Material : 1060(?). Simulated using wax 
 N50; 8/8/23 VS
 N60;
-N70 M98 P0001 (Call Subprogram 0001 to initialize machine)
-N80 T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
-N90; (Wax Surface Feet Per Minute: 20; Revolutions Per Minute: 204)
-N100;
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Speed))
 N130 #3=2 (Number of Flutes)
-N140 #4=[#2*12] (Surface Inches per Minute)
-#101=ROUND[[#2*3.82]/#1] (Revolutions Per Minute)
-#102=[[[#4]/#101]/#3] (Inches Per Tooth)
-#103=ROUND[#101*#3*#102] (Inches Per Minute (Feed))
-#104=[#4/#101] (Inches Per Revolution)
+N131 #4= (Feed)
+#10= (Nominal X)
+#11= (Nominal Y)
+#12= (Nominal Z)
+#13= (Observed X)
+#14= (Observed Y)
+#15= (Observed Z)
+;
+M98 P0001 (Call Subprogram 0001 to initialize machine)
+T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
+M98 P0010 (Call Subprogram to set Feed and Speed Variables)
+
+
+N100;
+
+
 
 
 
@@ -32,10 +39,12 @@ N170;
 ; ?set variables for absolute position reading px py? to calculate tool position 
 ; set variables for feeds and speeds changes, da db dc corresponding with rough, finish, final pass, showing calcs in comments 
 ; set run increment variable to '0'
+; set position increment variable to '0'
 ; While y pos < `terminal y edge var ya`
 ;; run O0100 to face along x axis 
 ;; z lift, return home,
-;; increment run counter 
+;; increment run counter by 1. Increment position by half tool diameter
+; add 
 
 M30 (End of Program)
 ;
@@ -48,6 +57,14 @@ G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
 M99
 ;
+O0010 (Feed and Speed Calculation Subprogram)
+#100=[#2*12] (Surface Inches per Minute)
+#101=ROUND[[#2*3.82]/#1] (Revolutions Per Minute)
+#102=[[[#100]/#101]/#3] (Inches Per Tooth)
+#103=ROUND[#101*#3*#102] (Inches Per Minute (Feed))
+#104=[#100/#101] (Inches Per Revolution)
+M99
+;
 O0100 (Facing Pass Subprogram)
 ; ?turn off absolute positioning? (does it clear the config?)
 ; turn on relative position
@@ -55,5 +72,7 @@ O0100 (Facing Pass Subprogram)
 ; forward tool across the x axis off the block 
 ; z-lift, 
 ; return to x0
-; increment y by 35% tool diameter 
+; increment y by 35% tool diameter
+M99
+;
 %
