@@ -38,7 +38,7 @@ WHILE [#1000 LE #14] DO1 (Y-Pos <= Max Y)
 M98 P0100 (Facing Pass)
 #1000=[#1000+[#1/2]] (Increment Y-Pos by Tool Radius)
 END1
-
+;
 M30 (End of Program)
 ;
 ;  
