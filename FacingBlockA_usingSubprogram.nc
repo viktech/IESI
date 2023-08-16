@@ -25,7 +25,8 @@ M98 P0001 (Call Subprogram 0001 to initialize machine)
 T4 M6 (Change to Tool4 - 3/8 in Endmill, 2 Flutes, HSS)
 M98 P0010 (Call Subprogram to set Feed and Speed Variables)
 N90 S#4 M3 F#2 (Start Spindle, Speed, Feed)
-G01 X0.000 Y0.000 Z.100
+G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
+
 N100;
 
 
