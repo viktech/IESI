@@ -7,7 +7,7 @@ Blueprint: "Facing the Block"
 Blueprint Rev.: <x>
 Material: 1060(?) (Simulated using wax)
 Machine: Intellitek (6000?) CNC
-Tool: 3/8 in Endmill, 2 Flutes, HSS
+Tool: 3/8 In Endmill, 2 Flutes, HSS
 Creation Date: 8/8/23
 Author: VS
 N60; ____________________________________________
