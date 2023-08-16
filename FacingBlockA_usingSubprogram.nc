@@ -40,8 +40,6 @@ M30 (End of Program)
 ; 
 ; ?set variables for absolute position reading px py? to calculate tool position 
 ;  do math for rough, finish, final pass
-; set run increment variable to '0'
-; set position increment variable to '0'
 ; While y pos < `terminal y edge var ya`
 ;; run O0100 to face along x axis 
 ;; z lift, return home,
