@@ -2,7 +2,7 @@
 Title: Facing the Block
 Organization: IESI
 Project: 1 
-Code Revision: 5 - Implementing Variables, Subprograms, and Loops
+Code Revision: 5 - Implementing Subprograms, Variables, and Loops
 Blueprint: "Facing the Block"
 Blueprint Rev.: <x>
 Material: 1060(?) (Simulated using wax)
