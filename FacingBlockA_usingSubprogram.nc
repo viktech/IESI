@@ -41,8 +41,7 @@ END1
 
 M30 (End of Program)
 ;
-; 
-; ?set variables for absolute position reading px py? to calculate tool position 
+;  
 ;  do math for rough, finish, final pass
 ; While y pos < `terminal y edge var ya`
 ;; run O0100 to face along x axis 
