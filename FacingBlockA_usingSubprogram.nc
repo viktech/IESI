@@ -72,6 +72,10 @@ O0010 (Feed and Speed Calculation Subprogram)
 #104=[#100/#101] (Inches Per Revolution)
 M99
 ;
+O0011 (Material Removal Calculation Subprogram)
+#9000=[#15-#12]
+M99
+;
 O0100 (Facing Pass Subprogram)
 G01 Z.1000
 G01 X0.000 Y#1000
