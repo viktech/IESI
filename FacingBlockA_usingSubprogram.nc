@@ -32,9 +32,8 @@ N131 #4= (Revolutions Per Minute (Speed))
 M98 P0001 (Initialize machine)
 M98 P0010 (Feed and Speed Variables)
 S#4 M3 F#2 (Start Spindle)
-G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 WHILE [#1000 LE #14] DO1 (Y-Pos Counter <= Observed Y)
-
+M98 P0100 (Facing Pass)
 #1000=[#1000+[#1/2]] (Increment Y Tool Pos by Tool Radius)
 END1
 
@@ -59,7 +58,8 @@ G20 (Set Units to Inches)
 G40 (Cutter radius comp cancel)
 G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
-G00 G54 X0.000 Y0.000 (Set Datum to Front Left Corner/ Set Work Offset Origin)
+G00 G54 X0.000 Y0.000 (Set Work Offset Origin to Datum)
+G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 M99
 ;
 O0010 (Feed and Speed Calculation Subprogram)
@@ -71,8 +71,11 @@ O0010 (Feed and Speed Calculation Subprogram)
 M99
 ;
 O0100 (Facing Pass Subprogram)
-; ?turn off absolute positioning? (does it clear the config?)
-; turn on relative position
+G91 (Relative positioning)
+
+G90
+G
+G01 X0.000 Y#1000
 ; position tool at 50% of tool diameter
 ; forward tool across the x axis off the block 
 ; z-lift, 
