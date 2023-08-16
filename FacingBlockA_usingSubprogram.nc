@@ -1,6 +1,6 @@
 %
 N20; IESI Project 1.5: Facing the Block Implementing Subprograms
-N30; O<xxxx) : Facing the Block : Rev. <x>
+N30; O<xxxx) : Facing the Block  Blueprint Rev. <x>
 N40; Material : 1060(?). Simulated using wax 
 N50; 8/8/23 VS
 N60;
