@@ -1,14 +1,14 @@
 %
-Organization: IESI
 Title: Facing the Block
+Organization: IESI
 Project: 1 
 Code Revision: 5 - Implementing Subprograms
 Blueprint: "Facing the Block"
 Blueprint Rev.: <x>
 Material: 1060(?) (Simulated using wax)
 Machine: Intellitek (6000?)
-Creation Date 8/8/23
-Author VS
+Creation Date: 8/8/23
+Author: VS
 N60;
 N110 #1=.3750 (Tool Diameter)
 N120 #2=20 (Surface Feet Per Minute (Feed))
@@ -22,7 +22,7 @@ N131 #4= (Revolutions Per Minute (Speed))
 #15= (Observed Z)
 ;
 M98 P0001 (Call Subprogram 0001 to initialize machine)
-T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, High Speed Steel)
+T4 M6 (Change to Tool4 - 3/8" Endmill, 2 Flutes, HSS)
 M98 P0010 (Call Subprogram to set Feed and Speed Variables)
 N90 S#4 M3 F#2 (Start Spindle, Speed, Feed)
 G01 X0.000 Y0.000 Z.100
@@ -40,10 +40,10 @@ N140 #4=2.(Number of Flutes)
 N150 #101=ROUND[[#1*12]/[[#3/25.4]*3.14159]] (Calculated Speed in RPM)(IPM/
 N160 #102=[#4*#2*#101*25.4] (Calculated Feed in IPM)
 N170;
-; set variables for z pass height, za zb zc zd ze corresponding with pass z depth 
-; set variables for terminal edge dimensions, xa ya corresponding with edges of face 
+;
+; 
 ; ?set variables for absolute position reading px py? to calculate tool position 
-; set variables for feeds and speeds changes, da db dc corresponding with rough, finish, final pass, showing calcs in comments 
+;  do math for rough, finish, final pass
 ; set run increment variable to '0'
 ; set position increment variable to '0'
 ; While y pos < `terminal y edge var ya`
