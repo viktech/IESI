@@ -24,6 +24,8 @@ N131 #4= (Revolutions Per Minute (Speed))
 #13= (Observed X)
 #14= (Observed Y)
 #15= (Observed Z)
+#1000=0 (Position (Do not change))
+#1001=0 (Run Counter (Do not change))
 ; ____________________________________________
 ;
 ; Execution Block 
@@ -33,7 +35,7 @@ N90 S#4 M3 F#2 (Start Spindle)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 
 
-
+M30 (End of Program)
 ;
 ; 
 ; ?set variables for absolute position reading px py? to calculate tool position 
@@ -46,7 +48,7 @@ G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
 ;; increment run counter by 1. Increment position by half tool diameter
 ; add 
 
-M30 (End of Program)
+
 ; ____________________________________________
 ;
 O0001 (Machine Initialization Subprogram)
