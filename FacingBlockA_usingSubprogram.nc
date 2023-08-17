@@ -42,8 +42,6 @@ END1
 M5 (Stop Spindle.  Good work, tool)
 M98 P0999 (Clean Up)
 M30 (End of Program)
-;
-;  
 ; ____________________________________________
 ;
 O0001 (Machine Initialization Subprogram)
