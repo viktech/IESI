@@ -1,17 +1,17 @@
 %
-Title: Facing the Block, Containerized
-Organization: IESI
-Project: 1 
-Code Revision: 5 - Implementing Subprograms, Variables, and Loops
-Blueprint: "Facing the Block"
-Blueprint Rev.: <x>
-Material: 1060(?) (Simulated using wax)
-Machine: Intellitek (6000?) CNC
-Tool: 3/8 In Endmill, 2 Flutes, HSS
-Creation Date: 8/8/23
-Author: VS
-N60; ____________________________________________
-N70;
+; Title: Facing the Block, Containerized
+; Organization: IESI
+; Project: 1 
+; Code Revision: 5 - Implementing Subprograms, Variables, and Loops
+; Blueprint: "Facing the Block"
+; Blueprint Rev.: <x>
+; Material: 1060(?) (Simulated using wax)
+; Machine: Intellitek (6000?) CNC
+; Tool: 3/8 In Endmill, 2 Flutes, HSS
+; Creation Date: 8/8/23
+; Author: VS
+; ____________________________________________
+;
 ; Variables Block
 N100 #0=4 (Tool Slot)
 N110 #1=.3750 (Tool Diameter)
@@ -39,7 +39,8 @@ M98 P0100 (Facing Pass)
 #1000=[#1000+[#1/2]] (Increment Y-Pos by Tool Radius)
 END1
 ;
-M98 P0999
+M5 (Stop Spindle.  Good work)
+M98 P0999 (Clean Up)
 M30 (End of Program)
 ;
 ;  
@@ -54,6 +55,7 @@ G49 (Tool length comp cancel)
 G80 (Canned Cycles Cancel)
 G00 G54 X0.000 Y0.000 (Set Work Offset Origin to Datum)
 G01 X0.000 Y0.000 Z.100 (Move to Origin, Clearance Plane)
+; Good Luck
 M99
 ;
 O0010 (Feed and Speed Calculation Subprogram)
