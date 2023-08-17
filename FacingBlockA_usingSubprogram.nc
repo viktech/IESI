@@ -1,5 +1,5 @@
 %
-; Title: Facing the Block, Containerized
+; Title: Facing the Block, Containerized for Reuse
 ; Organization: IESI
 ; Project: 1 
 ; Code Revision: 5 - Implementing Subprograms, Variables, and Loops
