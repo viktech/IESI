@@ -93,4 +93,4 @@ O0999 (Clean Up Subprogram)
 M99
 ;
 %
-; thanks, hardware. thanks interpreter. thanks software. goodnight :)
+; thanks, hardware. thanks interpreter. thanks software. until next time :)
