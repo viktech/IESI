@@ -39,7 +39,7 @@ M98 P0100 (Facing Pass)
 #1000=[#1000+[#1/2]] (Increment Y-Pos by Tool Radius)
 END1
 ;
-M5 (Stop Spindle.  Good work)
+M5 (Stop Spindle.  Good work, tool)
 M98 P0999 (Clean Up)
 M30 (End of Program)
 ;
