@@ -1,5 +1,5 @@
 %
-Title: Facing the Block
+Title: Facing the Block Vik's Way
 Organization: IESI
 Project: 1 
 Code Revision: 5 - Implementing Subprograms, Variables, and Loops
@@ -32,7 +32,7 @@ N131 #4= (Revolutions Per Minute (Speed))
 ; Execution Block 
 M98 P0001 (Initialize machine)
 M98 P0010 (Feed and Speed Variables)
-S#4 M3 F#2 (Start Spindle)
+S#4 M3 F#2 (Start Spindle. Thank you, driver)
 ;
 WHILE [#1000 LE #14] DO1 (Y-Pos <= Max Y)
 M98 P0100 (Facing Pass)
@@ -76,12 +76,8 @@ O0100 (Facing Pass Subprogram)
 G01 Z.1000
 G01 X0.000 Y#1000
 G91 (Relative positioning)
-G01 
-G90
-
-
 ; position tool at 50% of tool diameter
-; forward tool across the x axis off the block 
+; at feed speed, forward tool across the x axis off the block 
 ; z-lift, 
 ; return to x0
 ; increment y by 50% tool diameter
@@ -94,3 +90,4 @@ O0999
 ; log to file
 M99
 %
+ ; thanks, hardware. thanks interpreter. thanks software. goodnight :)
