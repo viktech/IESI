@@ -87,7 +87,6 @@ M99
 ;
 O0999 (Clean Up Subprogram)
 ; z lift
-; spindle off 
 ; xy home
 ; log to file
 M99
