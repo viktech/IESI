@@ -85,7 +85,7 @@ G91 (Relative positioning)
 ; increment y by 50% tool diameter
 M99
 ;
-O0999
+O0999 (Clean Up Subprogram)
 ; z lift
 ; spindle off 
 ; xy home
